@@ -8,7 +8,14 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var mysql = require('mysql');
 var app = express();
+const passport = require('passport');
+const flash = require('express-flash');
+const session = require('express-session');
+const mongoose = require('mongoose');
+const config = require('./config/database');
 
+require('./config/passport')(passport);
+mongoose.connect(config.database);
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -18,6 +25,22 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(session({
+  secret: 'Jpppp',
+  resave: false,
+  saveUninitialized: false,
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.use(flash());
+app.use((req,res,next) =>{
+  res.locals.success_msg = req.flash('success_msg');
+  res.locals.error_msg = req.flash('error_msg');
+  res.locals.error = req.flash('error');
+  next();
+});
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
