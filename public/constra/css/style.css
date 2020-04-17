@@ -1982,6 +1982,8 @@ ul.navbar-nav>li.header-get-a-quote:hover>a:after {
     transform: perspective(1px) scale3d(1.1, 1.1, 1);
     -webkit-transition: all 400ms;
     transition: all 400ms;
+    height: 250px;
+    width: 500px;
 }
 
 .isotope-img-container:hover img {

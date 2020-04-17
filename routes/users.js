@@ -7,20 +7,23 @@ const crypto = require('crypto');
 
 var RegisterSchema = require('../models/userschema');
 var tokenSchema = require('../models/emailtoken');
+const {ensureAuthenticated} = require('../config/auth');
 
 
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.render('signup.ejs');
+  res.render('index.ejs');
 });
 
 router.get('/login',function(req,res,next){
   res.render('login.ejs');
 });
 
-router.get('/logout', function(req,res){
-  res.render('logout.ejs', {name :req.user.email});
+router.get('/logout', (req, res) => {
+  req.logout();
+  req.flash('success_msg', 'You have been successfully logged out');
+  res.redirect('/users/login');
 });
 
 router.get('/signup', function(req,res){
@@ -29,7 +32,7 @@ router.get('/signup', function(req,res){
 
 router.post('/login', async (req,res, next) => {
   passport.authenticate('local',{
-    successRedirect: '/logout',
+    successRedirect: '/',
     failureRedirect: '/users/login',
     failureFlash: true
   })(req,res, next);
@@ -123,6 +126,7 @@ router.post('/signup', async function(req,res){
   res.render('index.ejs',{success_message: 'You have successfuly registered'});
 });
 
+
 router.get('/confirmation/:token/:id',function(req, res, next){
   console.log("Tokennnnnn");
   console.log(req.params.token);
@@ -165,6 +169,29 @@ router.get('/confirmation/:token/:id',function(req, res, next){
     }
     });
     }
+  });
+});
+
+router.post('/resendtoken', function(req, res){
+  RegisterSchema.findOne({email: req.body.email})
+  .then(UserDetails =>{
+      if(!UserDetails)
+      {
+        console.log("No user found");
+        res.redirect('/users/signup');
+      }
+      else{
+        var token = new tokenSchema({ _userId: user._id, token: crypto.randomBytes(16).toString('hex') });
+        token.save(function(err){
+            if(err) throw err;
+            var transporter = nodemailer.createTransport({ service: 'Sendgrid', auth: { user: 'prakashj1998@gmail.com', pass: 'TeenuAjay.123' } });
+            var mailOptions = { from: 'prakashj1998@gmail.com', to: registerschema.email, subject: 'Account Verification Token', text: 'Hello,\n\n' + 'Please verify your account by clicking the link: \nhttp:\/\/'+'localhost:8000'+'\/users\/'+'confirmation\/' + token.token +'\/'+token._userId+ '.\n' };
+            transporter.sendMail(mailOptions, function (err) {
+            if (err) { return res.status(500).send({ msg: err.message }); }
+                res.status(200).send('A verification email has been sent to ' + user.email + '.');
+            });
+        });
+      }
   });
 });
 
