@@ -6,6 +6,7 @@ const https = require('https');
 
 var paytmParams = {};
 const {ensureAuthenticated} = require('../config/auth');
+const checksum_lib = require('../paytm/checksum/checksum');
 /* GET home page. */
 router.get('/', function(req, res) {
     if(req.isAuthenticated())
@@ -23,6 +24,38 @@ router.get('/', function(req, res) {
     }
 });
 
+router.get('/aboutus', function(req,res){
+  if(req.isAuthenticated())
+  {
+    res.render('aboutus.ejs', {name: req.user.email});
+  }
+  if(!req.isAuthenticated())
+  {
+    res.render('aboutus.ejs', {name: 'undefined'});
+  }
+});
+
+router.get('/ourpeople', function(req,res){
+  if(req.isAuthenticated())
+  {
+    res.render('ourpeople.ejs', {name: req.user.email});
+  }
+  if(!req.isAuthenticated())
+  {
+    res.render('ourpeople.ejs', {name: 'undefined'});
+  }
+});
+
+router.get('/contact', function(req,res){
+  if(req.isAuthenticated())
+  {
+    res.render('contact.ejs', {name: req.user.email});
+  }
+  if(!req.isAuthenticated())
+  {
+    res.render('contact.ejs', {name: 'undefined'});
+  }
+});
 router.get('/test', function(req, res){
   req.flash('success_msg', 'Hiiii Jpppp');
   res.render('test.ejs');
@@ -57,8 +90,8 @@ router.get('/payments', function(req,res){
     "WEBSITE" : 'WEBSTAGING',
     "CHANNEL_ID" : 'WEB',
     "INDUSTRY_TYPE_ID" : 'Retail',
-    "ORDER_ID" : 'ORD0003',
-    "CUST_ID" : 'CUST0013',
+    "ORDER_ID" : 'ORD0004',
+    "CUST_ID" : 'CUST0014',
     "CALLBACK_URL" : 'http://localhost:'+port+'/success',
     "TXN_AMOUNT" : '100',
     "EMAIL" : 'prakashj1998@gmail.com',

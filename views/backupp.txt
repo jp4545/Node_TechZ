@@ -1,0 +1,152 @@
+<section id="news" class="news">
+    <div class="container">
+        <div class="row text-center">
+            <h2 class="section-title">Work of Excellence</h2>
+            <h3 class="section-sub-title">Recent Projects</h3>
+        </div>
+        <!--/ Title row end -->
+        <div class="row">
+            <div class="col-md-4 col-xs-12">
+                <div class="latest-post">
+                    <div class="latest-post-media">
+                        <a href="index.html" class="latest-post-img">
+                            <img class="img-responsive" src="constra/images/news/news1.jpg" alt="img">
+                        </a>
+                    </div>
+                    <div class="post-body">
+                        <h4 class="post-title">
+                            <a href="index.html">We Just Completes $17.6 million Medical Clinic in Mid-Missouri</a>
+                        </h4>
+                        <div class="latest-post-meta">
+                            <span class="post-item-date">
+                                <i class="fa fa-clock-o"></i> July 20, 2017
+                            </span>
+                        </div>
+                    </div>
+                </div><!-- Latest post end -->
+            </div><!-- 1st post col end -->
+            <div class="col-md-4 col-xs-12">
+                <div class="latest-post">
+                    <div class="latest-post-media">
+                        <a href="index.html" class="latest-post-img">
+                            <img class="img-responsive" src="constra/images/news/news2.jpg" alt="img">
+                        </a>
+                    </div>
+                    <div class="post-body">
+                        <h4 class="post-title">
+                            <a href="index.html">Thandler Airport Water Reclamation Facility Expansion Project Named</a>
+                        </h4>
+                        <div class="latest-post-meta">
+                            <span class="post-item-date">
+                                <i class="fa fa-clock-o"></i> June 17, 2017
+                            </span>
+                        </div>
+                    </div>
+                </div><!-- Latest post end -->
+            </div><!-- 2nd post col end -->
+            <div class="col-md-4 col-xs-12">
+                <div class="latest-post">
+                    <div class="latest-post-media">
+                        <a href="index.html" class="latest-post-img">
+                            <img class="img-responsive" src="constra/images/news/news3.jpg" alt="img">
+                        </a>
+                    </div>
+                    <div class="post-body">
+                        <h4 class="post-title">
+                            <a href="index.html">Silicon Bench and Cornike Begin Construction Solar Facilities</a>
+                        </h4>
+                        <div class="latest-post-meta">
+                            <span class="post-item-date">
+                                <i class="fa fa-clock-o"></i> Aug 13, 2017
+                            </span>
+                        </div>
+                    </div>
+                </div><!-- Latest post end -->
+            </div><!-- 3rd post col end -->
+        </div>
+        <!--/ Content row end -->
+        <div class="general-btn text-center">
+            <a class="btn btn-primary" href="index.html">See All Posts</a>
+        </div>
+    </div>
+    <!--/ Container end -->
+</section>
+
+
+
+
+
+
+our people
+ <div class="gap-40"></div>
+         <div class="row">
+            <div class="col-md-3">
+               <div class="ts-team-wrapper">
+                  <div class="team-img-wrapper">
+                     <img alt="" src="../constra/images/team/team3.jpg" class="img-responsive">
+                  </div>
+                  <div class="ts-team-content-classic">
+                     <h3 class="ts-name">Mark Conter</h3>
+                     <p class="ts-designation">Safety Officer</p>
+                     <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
+                     <div class="team-social-icons">
+                        <a target="_blank" href="#"><i class="fa fa-facebook"></i></a>
+                        <a target="_blank" href="#"><i class="fa fa-twitter"></i></a>
+                        <a target="_blank" href="#"><i class="fa fa-google-plus"></i></a>
+                        <a target="_blank" href="#"><i class="fa fa-linkedin"></i></a>
+                     </div><!--/ social-icons-->
+                  </div>
+               </div><!--/ Team wrapper 3 end -->
+            </div><!-- Col end -->
+            <div class="col-md-3">
+               <div class="ts-team-wrapper">
+                  <div class="team-img-wrapper">
+                     <img alt="" src="../constra/images/team/team4.jpg" class="img-responsive">
+                  </div>
+                  <div class="ts-team-content-classic">
+                     <h3 class="ts-name">AYESHA STEWART</h3>
+                     <p class="ts-designation">Finance Officer</p>
+                     <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
+                     <div class="team-social-icons">
+                        <a target="_blank" href="#"><i class="fa fa-facebook"></i></a>
+                        <a target="_blank" href="#"><i class="fa fa-twitter"></i></a>
+                        <a target="_blank" href="#"><i class="fa fa-linkedin"></i></a>
+                     </div><!--/ social-icons-->
+                  </div>
+               </div><!--/ Team wrapper 4 end -->
+            </div><!-- Col end -->
+            <div class="col-md-3">
+               <div class="ts-team-wrapper">
+                  <div class="team-img-wrapper">
+                     <img alt="" src="../constra/images/team/team5.jpg" class="img-responsive">
+                  </div>
+                  <div class="ts-team-content-classic">
+                     <h3 class="ts-name">Dave Clarkte</h3>
+                     <p class="ts-designation">Civil Engineer</p>
+                     <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
+                     <div class="team-social-icons">
+                        <a target="_blank" href="#"><i class="fa fa-twitter"></i></a>
+                        <a target="_blank" href="#"><i class="fa fa-google-plus"></i></a>
+                        <a target="_blank" href="#"><i class="fa fa-linkedin"></i></a>
+                     </div><!--/ social-icons-->
+                  </div>
+               </div><!--/ Team wrapper 5 end -->
+            </div><!-- Col end -->
+            <div class="col-md-3">
+               <div class="ts-team-wrapper">
+                  <div class="team-img-wrapper">
+                     <img alt="" src="../constra/images/team/team6.jpg" class="img-responsive">
+                  </div>
+                  <div class="ts-team-content-classic">
+                     <h3 class="ts-name">Elton Joe</h3>
+                     <p class="ts-designation">Site Supervisor</p>
+                     <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
+                     <div class="team-social-icons">
+                        <a target="_blank" href="#"><i class="fa fa-facebook"></i></a>
+                        <a target="_blank" href="#"><i class="fa fa-twitter"></i></a>
+                        <a target="_blank" href="#"><i class="fa fa-google-plus"></i></a>
+                        <a target="_blank" href="#"><i class="fa fa-linkedin"></i></a>
+                     </div><!--/ social-icons-->
+                  </div>
+               </div><!--/ Team wrapper 6 end -->
+            </div><!-- Col end -->
